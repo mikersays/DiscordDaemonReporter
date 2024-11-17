@@ -20,9 +20,9 @@ def check_services():
         service2_online= bool(service2_status.stdout.strip())
 
         if service1_online and service2_online:
-            return "✅ <replaceme> is online."
+            return "✅ All services are online."
         else:
-            return "❌ <replaceme> is offline. Please check the scripts."
+            return "❌ One or more services ar offline."
     except Exception as e:
         return f"⚠️ Error checking <replaceme>'s status: {str(e)}"
 
